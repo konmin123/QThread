@@ -1,8 +1,7 @@
-import time
-
 from PySide2 import QtWidgets, QtCore
 
 from form import Ui_Form
+from timer import Timer
 
 
 class QThread(QtWidgets.QWidget):
@@ -11,16 +10,15 @@ class QThread(QtWidgets.QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
 
-        self.timerThread = Timer()
+        self.timer_theard = Timer()
+        # self.ui.spinBox
+        self.ui.pushButton.clicked.connect(self.handler_timer)
+        # self.ui.lcdNumber
 
-
-
-class Url(QtCore.QThread):
-    pass
-
-
-class Sistem_info(QtCore.QThread):
-    pass
+    def handler_timer(self):
+        self.ui.lcdNumber.setText(str(self.ui.spinBox.value()))
+        self.timer_theard.set_timer(self.ui.spinBox.value())
+        self.timer_theard.start()
 
 
 if __name__ == '__main__':
