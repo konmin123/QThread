@@ -13,18 +13,16 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(886, 620)
-        self.centralwidget = QWidget(MainWindow)
-        self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout_11 = QVBoxLayout(self.centralwidget)
+class Ui_Form(object):
+    def setupUi(self, Form):
+        if not Form.objectName():
+            Form.setObjectName(u"Form")
+        Form.resize(774, 755)
+        self.verticalLayout_11 = QVBoxLayout(Form)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
         self.verticalLayout_10 = QVBoxLayout()
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.groupBox_2 = QGroupBox(self.centralwidget)
+        self.groupBox_2 = QGroupBox(Form)
         self.groupBox_2.setObjectName(u"groupBox_2")
         self.verticalLayout_9 = QVBoxLayout(self.groupBox_2)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
@@ -93,7 +91,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8 = QHBoxLayout()
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.groupBox = QGroupBox(self.centralwidget)
+        self.groupBox = QGroupBox(Form)
         self.groupBox.setObjectName(u"groupBox")
         self.verticalLayout_6 = QVBoxLayout(self.groupBox)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
@@ -160,7 +158,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8.addWidget(self.groupBox)
 
-        self.groupBox_3 = QGroupBox(self.centralwidget)
+        self.groupBox_3 = QGroupBox(Form)
         self.groupBox_3.setObjectName(u"groupBox_3")
         self.verticalLayout_5 = QVBoxLayout(self.groupBox_3)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
@@ -239,38 +237,30 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addLayout(self.verticalLayout_10)
 
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QMenuBar(MainWindow)
-        self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 886, 21))
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QStatusBar(MainWindow)
-        self.statusbar.setObjectName(u"statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(Form)
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(Form)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0441\u0442\u044c \u0441\u0430\u0439\u0442\u0430:", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"URL:", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0432\u0435\u0440\u044f\u0442\u044c \u043a\u0430\u0436\u0434\u044b\u0435:", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"\u0441\u0435\u043a.", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0447\u0430\u0442\u044c \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0443", None))
-        self.label_12.setText(QCoreApplication.translate("MainWindow", u"\u041b\u043e\u0433:", None))
-        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"\u0422\u0430\u0439\u043c\u0435\u0440:", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0442\u0430\u0439\u043c\u0435\u0440:", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0441\u0435\u043a.", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0447\u0430\u0442\u044c \u043e\u0442\u0441\u0447\u0451\u0442", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0441\u0442\u0430\u043b\u043e\u0441\u044c \u0432\u0440\u0435\u043c\u0435\u043d\u0438:", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u0441\u0435\u043a.", None))
-        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"\u0421\u0442\u0430\u0442\u0443\u0441 \u0441\u0438\u0441\u0442\u0435\u043c\u044b:", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u043d\u043e\u0432\u043b\u044f\u0442\u044c \u043a\u0430\u0436\u0434\u044b\u0435:", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"\u0441\u0435\u043a.", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"CPU", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"RAM", None))
+    def retranslateUi(self, Form):
+        Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("Form", u"\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0441\u0442\u044c \u0441\u0430\u0439\u0442\u0430:", None))
+        self.label_7.setText(QCoreApplication.translate("Form", u"URL:", None))
+        self.label_10.setText(QCoreApplication.translate("Form", u"\u041f\u0440\u043e\u0432\u0435\u0440\u044f\u0442\u044c \u043a\u0430\u0436\u0434\u044b\u0435:", None))
+        self.label_11.setText(QCoreApplication.translate("Form", u"\u0441\u0435\u043a.", None))
+        self.pushButton_2.setText(QCoreApplication.translate("Form", u"\u041d\u0430\u0447\u0430\u0442\u044c \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0443", None))
+        self.label_12.setText(QCoreApplication.translate("Form", u"\u041b\u043e\u0433:", None))
+        self.groupBox.setTitle(QCoreApplication.translate("Form", u"\u0422\u0430\u0439\u043c\u0435\u0440:", None))
+        self.label.setText(QCoreApplication.translate("Form", u"\u0423\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0442\u0430\u0439\u043c\u0435\u0440:", None))
+        self.label_3.setText(QCoreApplication.translate("Form", u"\u0441\u0435\u043a.", None))
+        self.pushButton.setText(QCoreApplication.translate("Form", u"\u041d\u0430\u0447\u0430\u0442\u044c \u043e\u0442\u0441\u0447\u0451\u0442", None))
+        self.label_4.setText(QCoreApplication.translate("Form", u"\u041e\u0441\u0442\u0430\u043b\u043e\u0441\u044c \u0432\u0440\u0435\u043c\u0435\u043d\u0438:", None))
+        self.label_2.setText(QCoreApplication.translate("Form", u"\u0441\u0435\u043a.", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("Form", u"\u0421\u0442\u0430\u0442\u0443\u0441 \u0441\u0438\u0441\u0442\u0435\u043c\u044b:", None))
+        self.label_8.setText(QCoreApplication.translate("Form", u"\u041e\u0431\u043d\u043e\u0432\u043b\u044f\u0442\u044c \u043a\u0430\u0436\u0434\u044b\u0435:", None))
+        self.label_9.setText(QCoreApplication.translate("Form", u"\u0441\u0435\u043a.", None))
+        self.label_5.setText(QCoreApplication.translate("Form", u"CPU", None))
+        self.label_6.setText(QCoreApplication.translate("Form", u"RAM", None))
     # retranslateUi
 

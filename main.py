@@ -1,16 +1,32 @@
-# This is a sample Python script.
+import time
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from PySide2 import QtWidgets, QtCore
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from form import Ui_Form
 
 
-# Press the green button in the gutter to run the script.
+class QThread(QtWidgets.QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.ui = Ui_Form()
+        self.ui.setupUi(self)
+
+        self.timerThread = Timer()
+
+
+
+class Url(QtCore.QThread):
+    pass
+
+
+class Sistem_info(QtCore.QThread):
+    pass
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    app = QtWidgets.QApplication()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    myapp = QThread()
+    myapp.show()
+
+    app.exec_()
